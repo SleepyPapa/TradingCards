@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		160B66C61B3B22EF00BBD5C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66C51B3B22EF00BBD5C8 /* main.m */; };
 		160B66C91B3B22EF00BBD5C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66C81B3B22EF00BBD5C8 /* AppDelegate.m */; };
-		160B66CC1B3B22EF00BBD5C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66CB1B3B22EF00BBD5C8 /* ViewController.m */; };
+		160B66CC1B3B22EF00BBD5C8 /* GJLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66CB1B3B22EF00BBD5C8 /* GJLViewController.m */; };
 		160B66CF1B3B22EF00BBD5C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160B66CD1B3B22EF00BBD5C8 /* Main.storyboard */; };
 		160B66D11B3B22EF00BBD5C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160B66D01B3B22EF00BBD5C8 /* Images.xcassets */; };
 		160B66D41B3B22EF00BBD5C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160B66D21B3B22EF00BBD5C8 /* LaunchScreen.xib */; };
 		160B66E01B3B22F000BBD5C8 /* TradingCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66DF1B3B22F000BBD5C8 /* TradingCardsTests.m */; };
+		16C78FCC1B3DCBDB001F6D6D /* CreatedCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C78FCB1B3DCBDB001F6D6D /* CreatedCardViewController.m */; };
+		16C78FCE1B3DE3AD001F6D6D /* outline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16C78FCD1B3DE3AD001F6D6D /* outline.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,17 @@
 		160B66C51B3B22EF00BBD5C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		160B66C71B3B22EF00BBD5C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		160B66C81B3B22EF00BBD5C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		160B66CA1B3B22EF00BBD5C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		160B66CB1B3B22EF00BBD5C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		160B66CA1B3B22EF00BBD5C8 /* GJLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJLViewController.h; sourceTree = "<group>"; };
+		160B66CB1B3B22EF00BBD5C8 /* GJLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJLViewController.m; sourceTree = "<group>"; };
 		160B66CE1B3B22EF00BBD5C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		160B66D01B3B22EF00BBD5C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		160B66D31B3B22EF00BBD5C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		160B66D91B3B22F000BBD5C8 /* TradingCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradingCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		160B66DE1B3B22F000BBD5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160B66DF1B3B22F000BBD5C8 /* TradingCardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradingCardsTests.m; sourceTree = "<group>"; };
+		16C78FCA1B3DCBDB001F6D6D /* CreatedCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatedCardViewController.h; sourceTree = "<group>"; };
+		16C78FCB1B3DCBDB001F6D6D /* CreatedCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatedCardViewController.m; sourceTree = "<group>"; };
+		16C78FCD1B3DE3AD001F6D6D /* outline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outline.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +88,10 @@
 			children = (
 				160B66C71B3B22EF00BBD5C8 /* AppDelegate.h */,
 				160B66C81B3B22EF00BBD5C8 /* AppDelegate.m */,
-				160B66CA1B3B22EF00BBD5C8 /* ViewController.h */,
-				160B66CB1B3B22EF00BBD5C8 /* ViewController.m */,
+				160B66CA1B3B22EF00BBD5C8 /* GJLViewController.h */,
+				160B66CB1B3B22EF00BBD5C8 /* GJLViewController.m */,
+				16C78FCA1B3DCBDB001F6D6D /* CreatedCardViewController.h */,
+				16C78FCB1B3DCBDB001F6D6D /* CreatedCardViewController.m */,
 				160B66CD1B3B22EF00BBD5C8 /* Main.storyboard */,
 				160B66D01B3B22EF00BBD5C8 /* Images.xcassets */,
 				160B66D21B3B22EF00BBD5C8 /* LaunchScreen.xib */,
@@ -96,6 +103,7 @@
 		160B66C31B3B22EF00BBD5C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16C78FCD1B3DE3AD001F6D6D /* outline.jpg */,
 				160B66C41B3B22EF00BBD5C8 /* Info.plist */,
 				160B66C51B3B22EF00BBD5C8 /* main.m */,
 			);
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					160B66BF1B3B22EF00BBD5C8 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AK2R4KC4GV;
 					};
 					160B66D81B3B22F000BBD5C8 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -201,6 +210,7 @@
 			files = (
 				160B66CF1B3B22EF00BBD5C8 /* Main.storyboard in Resources */,
 				160B66D41B3B22EF00BBD5C8 /* LaunchScreen.xib in Resources */,
+				16C78FCE1B3DE3AD001F6D6D /* outline.jpg in Resources */,
 				160B66D11B3B22EF00BBD5C8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				160B66CC1B3B22EF00BBD5C8 /* ViewController.m in Sources */,
+				160B66CC1B3B22EF00BBD5C8 /* GJLViewController.m in Sources */,
 				160B66C91B3B22EF00BBD5C8 /* AppDelegate.m in Sources */,
 				160B66C61B3B22EF00BBD5C8 /* main.m in Sources */,
+				16C78FCC1B3DCBDB001F6D6D /* CreatedCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TradingCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TradingCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +431,7 @@
 				160B66E51B3B22F000BBD5C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		160B66E61B3B22F000BBD5C8 /* Build configuration list for PBXNativeTarget "TradingCardsTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +440,7 @@
 				160B66E81B3B22F000BBD5C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
