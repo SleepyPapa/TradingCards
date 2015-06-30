@@ -37,8 +37,8 @@
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(imageView, nil, nil, nil);
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Score!"
-                                                                   message:@"Saved to Photos"
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Score!", nil)]
+                                                                   message:[NSString stringWithFormat:NSLocalizedString(@"Saved to Photos", nil)]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
