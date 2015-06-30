@@ -1,0 +1,18 @@
+/* 
+  localizable.strings
+  TradingCards
+
+  Created by Gregory Lavery on 30/06/2015.
+  Copyright (c) 2015 Gregory Lavery. All rights reserved.
+*/
+
+
+"Score!" = "Goal!";
+"Saved to Photos" = "Coup de Photos";
+"OK" = "OK";
+"Speed" = "Vitesse";
+"Tackle" = "Aborder";
+"Power" = "Force";
+"Shoot" = "Tirer";
+"Skill" = "Talent";
+"Pass" = "Passer";

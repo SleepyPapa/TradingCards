@@ -79,16 +79,16 @@
              mainPictureView.layer.mask = gradientLayer;
          }
 
-    [self updateAllLabels:20 :@" Speed" :self.speed :1];
-    [self updateAllLabels:21 :@" Tackle" :self.tackle :1];
-    [self updateAllLabels:22 :@" Power" :self.power :1];
-    [self updateAllLabels:23 :@" Shoot" :self.shoot :2];
-    [self updateAllLabels:24 :@" Skill" :self.skill :2];
-    [self updateAllLabels:25 :@" Pass" :self.pass :2];
+    [self updateAllLabels:20 :[NSString stringWithFormat:NSLocalizedString(@"Speed", nil)] :self.speed :1];
+    [self updateAllLabels:21 :[NSString stringWithFormat:NSLocalizedString(@"Tackle", nil)] :self.tackle :1];
+    [self updateAllLabels:22 :[NSString stringWithFormat:NSLocalizedString(@"Power", nil)] :self.power :1];
+    [self updateAllLabels:23 :[NSString stringWithFormat:NSLocalizedString(@"Shoot", nil)] :self.shoot :2];
+    [self updateAllLabels:24 :[NSString stringWithFormat:NSLocalizedString(@"Skill", nil)] :self.skill :2];
+    [self updateAllLabels:25 :[NSString stringWithFormat:NSLocalizedString(@"Pass", nil)] :self.pass :2];
     [self updateAllLabels:26 :@"$" :self.price :4];
     [self updateAllLabels:27 :self.position :0 :3];
-    [self updateAllLabels:28 :@"" :self.defence :1];
-    [self updateAllLabels:29 :@"" :self.attack :1];
+    [self updateAllLabels:28 :[NSString stringWithFormat:NSLocalizedString(@"", nil)] :self.defence :5];
+    [self updateAllLabels:29 :[NSString stringWithFormat:NSLocalizedString(@"", nil)] :self.attack :5];
 }
 
 -(void)updateAllLabels :(NSInteger)tag :(NSString*)labelName :(float)setting :(NSInteger) specialInfo
@@ -104,20 +104,27 @@
         newLabel.font = [UIFont italicSystemFontOfSize:18.0f];
         if (specialInfo==1){
             labelToUpdate = [NSString stringWithFormat:@"%ld %@",(long)setting,labelName];
+            newLabel.textAlignment = NSTextAlignmentLeft;
         }
         if (specialInfo==2) {
             labelToUpdate = [NSString stringWithFormat:@"%@ %ld ", labelName,(long)setting];
+            newLabel.textAlignment = NSTextAlignmentRight;
         }
         if (specialInfo==3) {
             labelToUpdate = [NSString stringWithFormat:@"%@", labelName];
-            newLabel.font = [UIFont italicSystemFontOfSize:26.0f];
+            newLabel.font = [UIFont italicSystemFontOfSize:20.0f];
+            newLabel.textAlignment = NSTextAlignmentCenter;
         }
         if (specialInfo==4) {
-            labelToUpdate = [NSString stringWithFormat:@"%@ %ldM", labelName,(long)setting];
+            labelToUpdate = [NSString stringWithFormat:@"%@%ldM", labelName,(long)setting];
+            newLabel.textAlignment = NSTextAlignmentCenter;
+        }
+        if (specialInfo==5) {
+            labelToUpdate = [NSString stringWithFormat:@"%ld",(long)setting];
+            newLabel.textAlignment = NSTextAlignmentCenter;
         }
 
         newLabel.textColor = [UIColor redColor];
-        newLabel.textAlignment = NSTextAlignmentCenter;
         newLabel.tag=tag;
         newLabel.text = labelToUpdate;
         newLabel.center=CGPointMake(centreX,centreY);

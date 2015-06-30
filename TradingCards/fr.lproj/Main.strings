@@ -1,0 +1,90 @@
+
+/* Class = "UIButton"; normalTitle = "Create"; ObjectID = "0sb-f8-dyR"; */
+"0sb-f8-dyR.normalTitle" = "Créer";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "5HI-Z8-KKK"; */
+"5HI-Z8-KKK.text" = "Valeur";
+
+/* Class = "UILabel"; text = "Tackle"; ObjectID = "6Ic-kZ-DU5"; */
+"6Ic-kZ-DU5.text" = "Aborder";
+
+/* Class = "UILabel"; text = "Defence"; ObjectID = "Api-cy-kob"; */
+"Api-cy-kob.text" = "Défense";
+
+/* Class = "UILabel"; text = "First Name:"; ObjectID = "D3L-eu-QQB"; */
+"D3L-eu-QQB.text" = "Prénom:";
+
+/* Class = "UIButton"; normalTitle = "Take Photo"; ObjectID = "DSD-oA-uV2"; */
+"DSD-oA-uV2.normalTitle" = "Caméra";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "Dyh-YA-vOA"; */
+"Dyh-YA-vOA.text" = "Prix";
+
+/* Class = "UILabel"; text = "Pass"; ObjectID = "LPF-4r-IWL"; */
+"LPF-4r-IWL.text" = "Passe";
+
+/* Class = "UILabel"; text = "Pass"; ObjectID = "UnB-4M-dqz"; */
+"UnB-4M-dqz.text" = "Passe";
+
+/* Class = "UIButton"; normalTitle = "Tweak"; ObjectID = "X8D-EV-vSA"; */
+"X8D-EV-vSA.normalTitle" = "Pincer";
+
+/* Class = "UILabel"; text = "Power"; ObjectID = "XnT-h7-eEV"; */
+"XnT-h7-eEV.text" = "Force";
+
+/* Class = "UILabel"; text = "Tackle"; ObjectID = "YZV-KB-3SX"; */
+"YZV-KB-3SX.text" = "Aborder";
+
+/* Class = "UIButton"; normalTitle = "Use Photo"; ObjectID = "b8r-Gf-tE8"; */
+"b8r-Gf-tE8.normalTitle" = "Photos";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "bhE-ar-8S7"; */
+"bhE-ar-8S7.normalTitle" = "Sauvegarder";
+
+/* Class = "UILabel"; text = "Last Name:"; ObjectID = "cQa-qd-fyd"; */
+"cQa-qd-fyd.text" = "Nom De Famille:";
+
+/* Class = "UILabel"; text = "Position"; ObjectID = "d54-Je-JDc"; */
+"d54-Je-JDc.text" = "Position";
+
+/* Class = "UILabel"; text = "Power"; ObjectID = "dfM-n1-sgP"; */
+"dfM-n1-sgP.text" = "Force";
+
+/* Class = "UISegmentedControl"; dgu-v9-CBH.segmentTitles[0] = "Forward"; ObjectID = "dgu-v9-CBH"; */
+"dgu-v9-CBH.segmentTitles[0]" = "Vers l'avant";
+
+/* Class = "UISegmentedControl"; dgu-v9-CBH.segmentTitles[1] = "Midfield"; ObjectID = "dgu-v9-CBH"; */
+"dgu-v9-CBH.segmentTitles[1]" = "Midfield";
+
+/* Class = "UISegmentedControl"; dgu-v9-CBH.segmentTitles[2] = "Defence"; ObjectID = "dgu-v9-CBH"; */
+"dgu-v9-CBH.segmentTitles[2]" = "Défense";
+
+/* Class = "UISegmentedControl"; dgu-v9-CBH.segmentTitles[3] = "Goal"; ObjectID = "dgu-v9-CBH"; */
+"dgu-v9-CBH.segmentTitles[3]" = "Goal";
+
+/* Class = "UILabel"; text = "Shoot"; ObjectID = "dt4-pi-ogu"; */
+"dt4-pi-ogu.text" = "Tirer";
+
+/* Class = "UILabel"; text = "Skill"; ObjectID = "eiX-i3-sTZ"; */
+"eiX-i3-sTZ.text" = "Talent";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "gMH-r8-0u0"; */
+"gMH-r8-0u0.text" = "Valeur";
+
+/* Class = "UILabel"; text = "Attack"; ObjectID = "giz-Ir-aVX"; */
+"giz-Ir-aVX.text" = "Attaque";
+
+/* Class = "UILabel"; text = "Speed"; ObjectID = "sUT-h1-j1f"; */
+"sUT-h1-j1f.text" = "Vitesse";
+
+/* Class = "UIViewController"; title = "CreatedCardView"; ObjectID = "uuI-Ih-pwp"; */
+"uuI-Ih-pwp.title" = "CreatedCardView";
+
+/* Class = "UILabel"; text = "Skill"; ObjectID = "vih-QX-n2k"; */
+"vih-QX-n2k.text" = "Talent";
+
+/* Class = "UILabel"; text = "Shoot"; ObjectID = "zN8-GE-SKK"; */
+"zN8-GE-SKK.text" = "Tirer";
+
+/* Class = "UILabel"; text = "Speed"; ObjectID = "zea-7e-bVZ"; */
+"zea-7e-bVZ.text" = "Vitesse";

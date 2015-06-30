@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		109514991B4307CB0037C6CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1095149B1B4307CB0037C6CA /* Localizable.strings */; };
 		160B66C61B3B22EF00BBD5C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66C51B3B22EF00BBD5C8 /* main.m */; };
 		160B66C91B3B22EF00BBD5C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66C81B3B22EF00BBD5C8 /* AppDelegate.m */; };
 		160B66CC1B3B22EF00BBD5C8 /* GJLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66CB1B3B22EF00BBD5C8 /* GJLViewController.m */; };
@@ -29,6 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		109514931B4304440037C6CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		109514941B4304440037C6CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1095149A1B4307CB0037C6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1095149C1B4309900037C6CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1095149D1B4309940037C6CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		160B66C01B3B22EF00BBD5C8 /* TradingCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		160B66C41B3B22EF00BBD5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160B66C51B3B22EF00BBD5C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 				160B66D01B3B22EF00BBD5C8 /* Images.xcassets */,
 				160B66D21B3B22EF00BBD5C8 /* LaunchScreen.xib */,
 				160B66C31B3B22EF00BBD5C8 /* Supporting Files */,
+				1095149B1B4307CB0037C6CA /* Localizable.strings */,
 			);
 			path = TradingCards;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 160B66B71B3B22EF00BBD5C8;
 			productRefGroup = 160B66C11B3B22EF00BBD5C8 /* Products */;
@@ -209,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				160B66CF1B3B22EF00BBD5C8 /* Main.storyboard in Resources */,
+				109514991B4307CB0037C6CA /* Localizable.strings in Resources */,
 				160B66D41B3B22EF00BBD5C8 /* LaunchScreen.xib in Resources */,
 				16C78FCE1B3DE3AD001F6D6D /* outline.jpg in Resources */,
 				160B66D11B3B22EF00BBD5C8 /* Images.xcassets in Resources */,
@@ -255,10 +264,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1095149B1B4307CB0037C6CA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1095149A1B4307CB0037C6CA /* Base */,
+				1095149C1B4309900037C6CA /* en */,
+				1095149D1B4309940037C6CA /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		160B66CD1B3B22EF00BBD5C8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				160B66CE1B3B22EF00BBD5C8 /* Base */,
+				109514931B4304440037C6CA /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -267,6 +287,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				160B66D31B3B22EF00BBD5C8 /* Base */,
+				109514941B4304440037C6CA /* fr */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -364,6 +385,7 @@
 				INFOPLIST_FILE = TradingCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,6 +397,7 @@
 				INFOPLIST_FILE = TradingCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
