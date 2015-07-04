@@ -31,6 +31,7 @@
 -(void)fillInAllDetails;
 -(void)calculateTotals;
 -(void)updateAllLabels:(NSInteger)tag :(NSString*)labelName :(float)setting :(NSInteger) specialInfo;
+-(UIImage *)prepareImage;
 
 
 @end

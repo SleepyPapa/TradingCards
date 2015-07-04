@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _cardBackground.image=_playerBackground;
+    [_cardBackground setContentMode:UIViewContentModeScaleAspectFill];
+    [_cardBackground setClipsToBounds: YES];
     [self fillInAllDetails];
     // Do any additional setup after loading the view.
 }
@@ -28,15 +30,9 @@
 
 -(IBAction) savePressed: (UIButton *)sender {
     
-    CGSize snippedSize = self.view.bounds.size;
-    snippedSize.height-=80;
-    
-    UIGraphicsBeginImageContext(snippedSize);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *imageView = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    UIImageWriteToSavedPhotosAlbum(imageView, nil, nil, nil);
-    
+    UIImage *toBeSaved = [self prepareImage];
+    UIImageWriteToSavedPhotosAlbum(toBeSaved, nil, nil, nil);
+
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Score!", nil)]
                                                                    message:[NSString stringWithFormat:NSLocalizedString(@"Saved to Photos", nil)]
                                                             preferredStyle:UIAlertControllerStyleAlert];
@@ -55,11 +51,20 @@
     NSString *fullname = self.firstName;
     fullname= [fullname stringByAppendingString:@" "];
     fullname= [fullname stringByAppendingString:  self.lastName];
-    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,250,60)];
+    NSUInteger countOfLetters = fullname.length;
+    float fontSizeToBeUsed;
+    if (countOfLetters<15){
+        fontSizeToBeUsed = 32.0f;
+    } else if (countOfLetters>=15 && countOfLetters<25){
+        fontSizeToBeUsed = 25.0f;
+    } else{
+        fontSizeToBeUsed = 20.0f;
+    }
+    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,300,80)];
     newLabel.textColor = [UIColor blueColor];
     newLabel.backgroundColor = [UIColor grayColor];
     newLabel.alpha=0.8;
-    newLabel.font = [UIFont italicSystemFontOfSize:32.0f];
+    newLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:fontSizeToBeUsed];
     [newLabel setText: fullname];
     newLabel.textAlignment = NSTextAlignmentCenter;
     newLabel.transform=CGAffineTransformMakeRotation( ( 270 * M_PI ) / 180 );
@@ -71,6 +76,7 @@
     UIView *mainPictureView = [self.view viewWithTag:15];
     if ([mainPictureView isKindOfClass:[UIImageView class]])
          {
+             mainPictureView.autoresizingMask=UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
              CAGradientLayer *gradientLayer = [CAGradientLayer layer];
              gradientLayer.frame = mainPictureView.bounds;
              gradientLayer.colors = [NSArray arrayWithObjects:(id)[UIColor whiteColor].CGColor, (id)[UIColor clearColor].CGColor, nil];
@@ -101,7 +107,7 @@
         [numberOfMovesView removeFromSuperview];
         NSString* labelToUpdate;
         UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,100,21)];
-        newLabel.font = [UIFont italicSystemFontOfSize:18.0f];
+        newLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:18.0f];
         if (specialInfo==1){
             labelToUpdate = [NSString stringWithFormat:@"%ld %@",(long)setting,labelName];
             newLabel.textAlignment = NSTextAlignmentLeft;
@@ -144,14 +150,48 @@
     self.price = (10*average)/200;
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+-(UIImage *) prepareImage
+{
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size,self.view.opaque,0.0f);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *imageView = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImage *mainImage;
+    mainImage=imageView;
+    
+
+    CGPoint cutOrigin = CGPointMake(0,30);
+    CGPoint cutExtent = cutOrigin;
+    cutExtent.x = imageView.size.width;
+    cutExtent.y = imageView.size.height-80;
+    
+    double (^rad)(double) = ^(double deg) {
+        return deg / 180.0 * M_PI;
+    };
+    
+    CGAffineTransform rectTransform;
+    switch (mainImage.imageOrientation) {
+        case UIImageOrientationLeft:
+            rectTransform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(rad(90)), 0, -mainImage.size.height);
+            break;
+        case UIImageOrientationRight:
+            rectTransform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(rad(-90)), -mainImage.size.width, 0);
+            break;
+        case UIImageOrientationDown:
+            rectTransform = CGAffineTransformTranslate(CGAffineTransformMakeRotation(rad(-180)), -mainImage.size.width, -mainImage.size.height);
+            break;
+        default:
+            rectTransform = CGAffineTransformIdentity;
+    };
+    rectTransform = CGAffineTransformScale(rectTransform, mainImage.scale, mainImage.scale);
+    
+    //get mainImage data resized
+    CGImageRef temporaryImageReference = mainImage.CGImage;
+    CGImageRef cutImageReference = CGImageCreateWithImageInRect(temporaryImageReference,CGRectApplyAffineTransform (CGRectMake(cutOrigin.x, cutOrigin.y, cutExtent.x, cutExtent.y),rectTransform));
+    UIImage *cutImage = [UIImage imageWithCGImage:cutImageReference scale:mainImage.scale orientation:mainImage.imageOrientation];
+    CGImageRelease(cutImageReference);
+    return cutImage;
+}
 
 @end
