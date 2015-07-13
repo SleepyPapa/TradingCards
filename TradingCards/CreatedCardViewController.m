@@ -99,12 +99,12 @@
 
 -(void)updateAllLabels :(NSInteger)tag :(NSString*)labelName :(float)setting :(NSInteger) specialInfo
 {
-    UIView *numberOfMovesView = [self.view viewWithTag:(tag)];
+    UIView *labelNeedingChangeView = [self.view viewWithTag:(tag)];
     
-    if ([numberOfMovesView isKindOfClass:[UILabel class]]) {
-        CGFloat centreX = numberOfMovesView.center.x;
-        CGFloat centreY = numberOfMovesView.center.y;
-        [numberOfMovesView removeFromSuperview];
+    if ([labelNeedingChangeView isKindOfClass:[UILabel class]]) {
+        CGFloat centreX = labelNeedingChangeView.center.x;
+        CGFloat centreY = labelNeedingChangeView.center.y;
+        [labelNeedingChangeView removeFromSuperview];
         NSString* labelToUpdate;
         UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,100,21)];
         newLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:18.0f];
@@ -154,17 +154,19 @@
 {
     UIGraphicsBeginImageContextWithOptions(self.view.bounds.size,self.view.opaque,0.0f);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *imageView = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *mainImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    UIImage *mainImage;
-    mainImage=imageView;
-    
 
-    CGPoint cutOrigin = CGPointMake(0,30);
+    CGPoint cutOrigin = CGPointMake(0,0);
     CGPoint cutExtent = cutOrigin;
-    cutExtent.x = imageView.size.width;
-    cutExtent.y = imageView.size.height-80;
+    
+    UIView *buttonsOnScreenView = [self.view viewWithTag:(30)];
+    if ([buttonsOnScreenView isKindOfClass:[UIButton class]]){
+        cutExtent = CGPointMake(mainImage.size.width, buttonsOnScreenView.frame.origin.y);
+    
+    }
+//    cutExtent.x = mainImage.size.width;
+//    cutExtent.y = mainImage.size.height-30;
     
     double (^rad)(double) = ^(double deg) {
         return deg / 180.0 * M_PI;

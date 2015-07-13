@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _firstNameField.delegate = self;
+    _lastNameField.delegate = self;
     self.position = [_playerPosition titleForSegmentAtIndex:self.playerPosition.selectedSegmentIndex];
 
 }
@@ -45,8 +47,8 @@
     else{
         [vc setPlayerBackground: self.useThisBackground];
     }
-    [vc setFirstName: self.firstName];
-    [vc setLastName: self.lastName];
+    [vc setFirstName: _firstNameField.text];
+    [vc setLastName: _lastNameField.text];
     [vc setPosition:self.position];
     [vc setSpeed: self.speedSlider.value];
     [vc setTackle: self.tackleSlider.value];
@@ -62,16 +64,10 @@
 
     
 }
-
--(IBAction)userDoneEnteringText:(id)sender
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    UITextField *firstNameTextField = (UITextField *)sender;
-    self.firstName = firstNameTextField.text;
-}
--(IBAction)userDoneEnteringSecondText:(id)sender
-{
-    UITextField *secondNameTextField = (UITextField *)sender;
-    self.lastName = secondNameTextField.text;
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (IBAction)UnwindtoThisView:(UIStoryboardSegue *)segue
