@@ -10,13 +10,12 @@
 
 @interface GJLViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *changePosition;
-@property (weak, nonatomic) IBOutlet UIImageView *imageToUse;
+//@property (weak, nonatomic) IBOutlet UIButton *changePosition;
+//@property (weak, nonatomic) IBOutlet UIImageView *imageToUse;
 @property UIImage* useThisBackground;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
-@property NSString* firstName;
-@property NSString* lastName;
+
 @property NSString* position;
 
 @property (weak, nonatomic) IBOutlet UISlider *speedSlider;

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		109514991B4307CB0037C6CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1095149B1B4307CB0037C6CA /* Localizable.strings */; };
+		10D4D8461B54B2D3004F549C /* TCM120.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D4D8431B54B2D3004F549C /* TCM120.png */; };
+		10D4D8471B54B2D3004F549C /* TCM180.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D4D8441B54B2D3004F549C /* TCM180.png */; };
+		10D4D8481B54B2D3004F549C /* TCM1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D4D8451B54B2D3004F549C /* TCM1024.png */; };
+		10D4D84C1B54B410004F549C /* TCM58.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D4D84B1B54B410004F549C /* TCM58.png */; };
 		160B66C61B3B22EF00BBD5C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66C51B3B22EF00BBD5C8 /* main.m */; };
 		160B66C91B3B22EF00BBD5C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66C81B3B22EF00BBD5C8 /* AppDelegate.m */; };
 		160B66CC1B3B22EF00BBD5C8 /* GJLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B66CB1B3B22EF00BBD5C8 /* GJLViewController.m */; };
@@ -35,6 +39,10 @@
 		1095149A1B4307CB0037C6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1095149C1B4309900037C6CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1095149D1B4309940037C6CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10D4D8431B54B2D3004F549C /* TCM120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TCM120.png; sourceTree = "<group>"; };
+		10D4D8441B54B2D3004F549C /* TCM180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TCM180.png; sourceTree = "<group>"; };
+		10D4D8451B54B2D3004F549C /* TCM1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TCM1024.png; sourceTree = "<group>"; };
+		10D4D84B1B54B410004F549C /* TCM58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TCM58.png; sourceTree = "<group>"; };
 		160B66C01B3B22EF00BBD5C8 /* TradingCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		160B66C41B3B22EF00BBD5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160B66C51B3B22EF00BBD5C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +118,10 @@
 		160B66C31B3B22EF00BBD5C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10D4D8431B54B2D3004F549C /* TCM120.png */,
+				10D4D8441B54B2D3004F549C /* TCM180.png */,
+				10D4D8451B54B2D3004F549C /* TCM1024.png */,
+				10D4D84B1B54B410004F549C /* TCM58.png */,
 				16C78FCD1B3DE3AD001F6D6D /* outline.jpg */,
 				160B66C41B3B22EF00BBD5C8 /* Info.plist */,
 				160B66C51B3B22EF00BBD5C8 /* main.m */,
@@ -217,8 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				160B66CF1B3B22EF00BBD5C8 /* Main.storyboard in Resources */,
+				10D4D8481B54B2D3004F549C /* TCM1024.png in Resources */,
 				109514991B4307CB0037C6CA /* Localizable.strings in Resources */,
+				10D4D8461B54B2D3004F549C /* TCM120.png in Resources */,
+				10D4D84C1B54B410004F549C /* TCM58.png in Resources */,
 				160B66D41B3B22EF00BBD5C8 /* LaunchScreen.xib in Resources */,
+				10D4D8471B54B2D3004F549C /* TCM180.png in Resources */,
 				16C78FCE1B3DE3AD001F6D6D /* outline.jpg in Resources */,
 				160B66D11B3B22EF00BBD5C8 /* Images.xcassets in Resources */,
 			);
