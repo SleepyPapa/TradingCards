@@ -16,6 +16,7 @@
 @property NSString* firstName;
 @property NSString* lastName;
 @property NSString* position;
+@property NSString* titleInfo;
 @property float speed;
 @property float tackle;
 @property float power;

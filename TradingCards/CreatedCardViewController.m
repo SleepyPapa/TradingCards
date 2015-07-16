@@ -60,7 +60,7 @@
     } else{
         fontSizeToBeUsed = 20.0f;
     }
-    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,300,80)];
+    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,260,80)];
     newLabel.textColor = [UIColor blueColor];
     newLabel.backgroundColor = [UIColor grayColor];
     newLabel.alpha=0.8;
@@ -68,8 +68,17 @@
     [newLabel setText: fullname];
     newLabel.textAlignment = NSTextAlignmentCenter;
     newLabel.transform=CGAffineTransformMakeRotation( ( 270 * M_PI ) / 180 );
-    newLabel.center=CGPointMake(30,180);
+    newLabel.center=CGPointMake(40,180);
     [self.view addSubview:newLabel];
+    
+    UILabel *extraLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,200,80)];
+    extraLabel.textColor = [UIColor redColor];
+    extraLabel.alpha=0.8;
+    extraLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:25.0f];
+    [extraLabel setText: _titleInfo];
+    extraLabel.textAlignment = NSTextAlignmentRight;
+    extraLabel.center=CGPointMake(180,70);
+    [self.view addSubview:extraLabel];
     
     [self calculateTotals];
     
@@ -80,7 +89,7 @@
              CAGradientLayer *gradientLayer = [CAGradientLayer layer];
              gradientLayer.frame = mainPictureView.bounds;
              gradientLayer.colors = [NSArray arrayWithObjects:(id)[UIColor whiteColor].CGColor, (id)[UIColor clearColor].CGColor, nil];
-             gradientLayer.startPoint = CGPointMake(1.0f, 0.6f);
+             gradientLayer.startPoint = CGPointMake(1.0f, 0.5f);
              gradientLayer.endPoint = CGPointMake(1.0f, 1.0f);
              mainPictureView.layer.mask = gradientLayer;
          }
@@ -106,7 +115,9 @@
         CGFloat centreY = labelNeedingChangeView.center.y;
         [labelNeedingChangeView removeFromSuperview];
         NSString* labelToUpdate;
-        UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,100,21)];
+        UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,100,25)];
+        newLabel.textColor = [UIColor redColor];
+
         newLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:18.0f];
         if (specialInfo==1){
             labelToUpdate = [NSString stringWithFormat:@"%ld %@",(long)setting,labelName];
@@ -130,7 +141,6 @@
             newLabel.textAlignment = NSTextAlignmentCenter;
         }
 
-        newLabel.textColor = [UIColor redColor];
         newLabel.tag=tag;
         newLabel.text = labelToUpdate;
         newLabel.center=CGPointMake(centreX,centreY);
@@ -157,16 +167,8 @@
     UIImage *mainImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    CGPoint cutOrigin = CGPointMake(0,0);
-    CGPoint cutExtent = cutOrigin;
-    
-    UIView *buttonsOnScreenView = [self.view viewWithTag:(30)];
-    if ([buttonsOnScreenView isKindOfClass:[UIButton class]]){
-        cutExtent = CGPointMake(mainImage.size.width, buttonsOnScreenView.frame.origin.y);
-    
-    }
-//    cutExtent.x = mainImage.size.width;
-//    cutExtent.y = mainImage.size.height-30;
+    CGPoint cutOrigin = CGPointMake(0,30);
+    CGPoint cutExtent = CGPointMake(self.view.frame.size.width, self.view.frame.size.height);
     
     double (^rad)(double) = ^(double deg) {
         return deg / 180.0 * M_PI;

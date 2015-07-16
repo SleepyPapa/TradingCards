@@ -24,6 +24,7 @@
     
     _firstNameField.delegate = self;
     _lastNameField.delegate = self;
+    _titleField.delegate = self;
     self.position = [_playerPosition titleForSegmentAtIndex:self.playerPosition.selectedSegmentIndex];
 
 }
@@ -49,6 +50,7 @@
     }
     [vc setFirstName: _firstNameField.text];
     [vc setLastName: _lastNameField.text];
+    [vc setTitleInfo: _titleField.text];
     [vc setPosition:self.position];
     [vc setSpeed: self.speedSlider.value];
     [vc setTackle: self.tackleSlider.value];
