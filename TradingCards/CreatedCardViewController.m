@@ -102,8 +102,8 @@
     [self updateAllLabels:25 :[NSString stringWithFormat:NSLocalizedString(@"Pass", nil)] :self.pass :2];
     [self updateAllLabels:26 :@"$" :self.price :4];
     [self updateAllLabels:27 :self.position :0 :3];
-    [self updateAllLabels:28 :[NSString stringWithFormat:NSLocalizedString(@"", nil)] :self.defence :5];
-    [self updateAllLabels:29 :[NSString stringWithFormat:NSLocalizedString(@"", nil)] :self.attack :5];
+    [self updateAllLabels:28 :[NSString stringWithFormat:NSLocalizedString(@"Defence", nil)] :self.defence :5];
+    [self updateAllLabels:29 :[NSString stringWithFormat:NSLocalizedString(@"Attack", nil)] :self.attack :5];
 }
 
 -(void)updateAllLabels :(NSInteger)tag :(NSString*)labelName :(float)setting :(NSInteger) specialInfo
