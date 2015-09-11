@@ -61,6 +61,7 @@
     [vc setPrice: 5.0];
     [vc setDefence:50.0];
     [vc setAttack:50.0];
+    [vc setTeamLogo:_useThisLogo];
 }
 - (IBAction)createCard:(id)sender {
 

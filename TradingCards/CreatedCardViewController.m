@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _cardBackground.image=_playerBackground;
+    _teamView.image=_teamLogo;
     [_cardBackground setContentMode:UIViewContentModeScaleAspectFill];
     [_cardBackground setClipsToBounds: YES];
     [self fillInAllDetails];
@@ -33,15 +34,23 @@
     UIImage *toBeSaved = [self prepareImage];
     UIImageWriteToSavedPhotosAlbum(toBeSaved, nil, nil, nil);
 
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Score!", nil)]
-                                                                   message:[NSString stringWithFormat:NSLocalizedString(@"Saved to Photos", nil)]
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:@"Score!"
+                              message:@"Saved to Photos"
+                              delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
-    
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    [alertView show];
+//    UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Score!", nil)]
+//                                                                   message:[NSString stringWithFormat:NSLocalizedString(@"Saved to Photos", nil)]
+//                                                            preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+//                                                          handler:^(UIAlertAction * action) {}];
+//    
+//    [alert addAction:defaultAction];
+//    [self presentViewController:alert animated:YES completion:nil];
     
 }
 
@@ -74,10 +83,10 @@
     UILabel *extraLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,200,80)];
     extraLabel.textColor = [UIColor redColor];
     extraLabel.alpha=0.8;
-    extraLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:25.0f];
+    extraLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:20.0f];
     [extraLabel setText: _titleInfo];
     extraLabel.textAlignment = NSTextAlignmentRight;
-    extraLabel.center=CGPointMake(180,70);
+    extraLabel.center=CGPointMake(120,80);
     [self.view addSubview:extraLabel];
     
     [self calculateTotals];
@@ -154,10 +163,19 @@
     NSInteger average = ((_speed+_tackle+_power)/3);
     self.defence=average;
     average = ((_shoot+_skill+_pass)/3);
+
     self.attack=average;
-    
-    average = self.defence+self.attack;
-    self.price = (10*average)/200;
+    NSInteger firstValue = self.attack;
+    NSInteger secondValue = self.defence;
+    if (([_position  isEqual: @"Forward"]) || ([_position  isEqual: @"Midfield"])){
+        firstValue = self.attack*1.5;
+    }
+    if (([_position  isEqual: @"Goal"]) || ([_position  isEqual: @"Defence"])){
+        secondValue = self.defence*1.5;
+    }
+    NSInteger costOfPlayer = 0;
+    costOfPlayer = firstValue+secondValue;
+    self.price = (10*costOfPlayer)/200;
 }
 
 -(UIImage *) prepareImage

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1017BD431B90E13700BF40DE /* bays.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD3A1B90E13700BF40DE /* bays.png */; };
+		1017BD441B90E13700BF40DE /* cowichan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD3B1B90E13700BF40DE /* cowichan.png */; };
+		1017BD451B90E13700BF40DE /* fusion.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD3C1B90E13700BF40DE /* fusion.png */; };
+		1017BD461B90E13700BF40DE /* gorge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD3D1B90E13700BF40DE /* gorge.png */; };
+		1017BD471B90E13700BF40DE /* jdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD3E1B90E13700BF40DE /* jdf.png */; };
+		1017BD481B90E13700BF40DE /* lakehill.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD3F1B90E13700BF40DE /* lakehill.png */; };
+		1017BD491B90E13700BF40DE /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD401B90E13700BF40DE /* pen.png */; };
+		1017BD4A1B90E13700BF40DE /* saltspring.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD411B90E13700BF40DE /* saltspring.png */; };
+		1017BD4B1B90E13700BF40DE /* sooke.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017BD421B90E13700BF40DE /* sooke.png */; };
+		1017BD4E1B90E65800BF40DE /* ChooseTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017BD4D1B90E65800BF40DE /* ChooseTeamViewController.m */; };
 		109514991B4307CB0037C6CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1095149B1B4307CB0037C6CA /* Localizable.strings */; };
 		10EEF13A1B57095D00C2E67A /* outline58.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10EEF1391B57095D00C2E67A /* outline58.jpg */; };
 		10EEF13C1B57099900C2E67A /* outline120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10EEF13B1B57099900C2E67A /* outline120.jpg */; };
@@ -33,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1017BD3A1B90E13700BF40DE /* bays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bays.png; sourceTree = "<group>"; };
+		1017BD3B1B90E13700BF40DE /* cowichan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cowichan.png; sourceTree = "<group>"; };
+		1017BD3C1B90E13700BF40DE /* fusion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fusion.png; sourceTree = "<group>"; };
+		1017BD3D1B90E13700BF40DE /* gorge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gorge.png; sourceTree = "<group>"; };
+		1017BD3E1B90E13700BF40DE /* jdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jdf.png; sourceTree = "<group>"; };
+		1017BD3F1B90E13700BF40DE /* lakehill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lakehill.png; sourceTree = "<group>"; };
+		1017BD401B90E13700BF40DE /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
+		1017BD411B90E13700BF40DE /* saltspring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saltspring.png; sourceTree = "<group>"; };
+		1017BD421B90E13700BF40DE /* sooke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sooke.png; sourceTree = "<group>"; };
+		1017BD4C1B90E65800BF40DE /* ChooseTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseTeamViewController.h; path = ../ChooseTeamViewController.h; sourceTree = "<group>"; };
+		1017BD4D1B90E65800BF40DE /* ChooseTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseTeamViewController.m; path = ../ChooseTeamViewController.m; sourceTree = "<group>"; };
 		109514931B4304440037C6CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		109514941B4304440037C6CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1095149A1B4307CB0037C6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -104,6 +125,8 @@
 				160B66CB1B3B22EF00BBD5C8 /* GJLViewController.m */,
 				16C78FCA1B3DCBDB001F6D6D /* CreatedCardViewController.h */,
 				16C78FCB1B3DCBDB001F6D6D /* CreatedCardViewController.m */,
+				1017BD4C1B90E65800BF40DE /* ChooseTeamViewController.h */,
+				1017BD4D1B90E65800BF40DE /* ChooseTeamViewController.m */,
 				160B66CD1B3B22EF00BBD5C8 /* Main.storyboard */,
 				160B66D01B3B22EF00BBD5C8 /* Images.xcassets */,
 				160B66D21B3B22EF00BBD5C8 /* LaunchScreen.xib */,
@@ -116,6 +139,15 @@
 		160B66C31B3B22EF00BBD5C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1017BD3A1B90E13700BF40DE /* bays.png */,
+				1017BD3B1B90E13700BF40DE /* cowichan.png */,
+				1017BD3C1B90E13700BF40DE /* fusion.png */,
+				1017BD3D1B90E13700BF40DE /* gorge.png */,
+				1017BD3E1B90E13700BF40DE /* jdf.png */,
+				1017BD3F1B90E13700BF40DE /* lakehill.png */,
+				1017BD401B90E13700BF40DE /* pen.png */,
+				1017BD411B90E13700BF40DE /* saltspring.png */,
+				1017BD421B90E13700BF40DE /* sooke.png */,
 				16C78FCD1B3DE3AD001F6D6D /* outline.jpg */,
 				10EEF1391B57095D00C2E67A /* outline58.jpg */,
 				10EEF13B1B57099900C2E67A /* outline120.jpg */,
@@ -225,14 +257,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1017BD4B1B90E13700BF40DE /* sooke.png in Resources */,
+				1017BD461B90E13700BF40DE /* gorge.png in Resources */,
+				1017BD451B90E13700BF40DE /* fusion.png in Resources */,
 				160B66CF1B3B22EF00BBD5C8 /* Main.storyboard in Resources */,
+				1017BD481B90E13700BF40DE /* lakehill.png in Resources */,
 				10EEF13A1B57095D00C2E67A /* outline58.jpg in Resources */,
+				1017BD431B90E13700BF40DE /* bays.png in Resources */,
+				1017BD491B90E13700BF40DE /* pen.png in Resources */,
 				10EEF13C1B57099900C2E67A /* outline120.jpg in Resources */,
+				1017BD4A1B90E13700BF40DE /* saltspring.png in Resources */,
 				109514991B4307CB0037C6CA /* Localizable.strings in Resources */,
 				160B66D41B3B22EF00BBD5C8 /* LaunchScreen.xib in Resources */,
 				16C78FCE1B3DE3AD001F6D6D /* outline.jpg in Resources */,
 				10EEF13E1B5709BC00C2E67A /* outline180.jpg in Resources */,
+				1017BD471B90E13700BF40DE /* jdf.png in Resources */,
 				160B66D11B3B22EF00BBD5C8 /* Images.xcassets in Resources */,
+				1017BD441B90E13700BF40DE /* cowichan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +294,7 @@
 				160B66CC1B3B22EF00BBD5C8 /* GJLViewController.m in Sources */,
 				160B66C91B3B22EF00BBD5C8 /* AppDelegate.m in Sources */,
 				160B66C61B3B22EF00BBD5C8 /* main.m in Sources */,
+				1017BD4E1B90E65800BF40DE /* ChooseTeamViewController.m in Sources */,
 				16C78FCC1B3DCBDB001F6D6D /* CreatedCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -381,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -393,8 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gregory Lavery (PZG94686JJ)";
 				INFOPLIST_FILE = TradingCards/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -405,8 +449,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gregory Lavery (PZG94686JJ)";
 				INFOPLIST_FILE = TradingCards/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

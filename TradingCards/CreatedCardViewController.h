@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *cardBackground;
 @property (weak, nonatomic) IBOutlet UIImage *playerBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *teamView;
+@property (weak, nonatomic) IBOutlet UIImage *teamLogo;
 @property NSString* firstName;
 @property NSString* lastName;
 @property NSString* position;
